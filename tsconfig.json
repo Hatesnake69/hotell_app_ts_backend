@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "sourceMap": true,
+      "esModuleInterop": true
+    },
+    "include": [
+      "src/**/*"
+    ],
+    "scripts": {
+        "typeorm": "ts-node node_modules/typeorm/cli.js",
+        "migration:generate": "npm run typeorm -- migration:generate -n CreateUserTable",
+        "migration:run": "npm run typeorm -- migration:run",
+    },
+  }

@@ -1,0 +1,23 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  email    String   @unique
+  name     String
+  password String
+}
+
+model Apartment {
+  id           Int      @id @default(autoincrement())
+  name         String
+  description  String?
+  pricePerNight Float
+}
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native",  "debian-openssl-1.1.x", "debian-openssl-3.0.x", "linux-musl", "linux-musl-openssl-3.0.x"]
+}
