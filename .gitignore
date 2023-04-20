@@ -1,0 +1,33 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python files
+*.pyc
+__pycache__/
+
+# IDE files
+.idea/
+*.code-workspace
+
+# Log files
+*.log
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Build artifacts
+*.pyo
+*.pyd
+*.so
+*.dll
+*.exe
+
+# Dependency directories
+node_modules/
+bower_components/
+jspm_packages/
+
+postgres-data/
